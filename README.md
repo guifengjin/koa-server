@@ -84,6 +84,7 @@ require-directory
 sequelize validator
 ```
 3. 新建app.js
+[app.js](https://github.com/guifengjin/koa-server/blob/master/app.js)
 ```js
 const Koa = require('koa')
 const parser = require('koa-bodyparser')
@@ -109,7 +110,7 @@ app.listen(3000)
 	
 	message: 自定义状态码信息
 
-exception.js
+[exception.js](https://github.com/guifengjin/koa-server/blob/master/middlewares/exception.js)
 ```js
 const catchError = async (ctx, next) => {
   try {
@@ -122,7 +123,7 @@ const catchError = async (ctx, next) => {
 
 module.exports = catchError
 ```
-异常统一处理请看core目录下的`httpException.js`
+异常统一处理请看core目录下的[httpException.js](https://github.com/guifengjin/koa-server/blob/master/core/httpException.js)
 
 错误分类:
 
