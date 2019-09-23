@@ -21,19 +21,19 @@ const app = new Koa()
 
 app.use(async (ctx, next) => {
     // cxt 上下文 洋葱模型, next 下一个中间件
-	console.log('a-进')
+    console.log('a-进')
     await next()
-	// 模拟异步
-	setTimeout(() => {
-		console.log('a-出')
-	}, 1000)
+    // 模拟异步
+    setTimeout(() => {
+    	console.log('a-出')
+    }, 1000)
 })
 
 app.use(async (ctx, next) => {
-	// 模拟异步
-	setTimeout(() => {
-		console.log('b-进')
-	}, 1000)
+    // 模拟异步
+    setTimeout(() => {
+    	console.log('b-进')
+    }, 1000)
     await next()
     console.log('b-出')
 })
@@ -54,7 +54,7 @@ app.listen(3000)
 中间件可以理解为帮助我们实现某一项功能的函数
 ```js
 app.use((ctx, next) => {
-	// 需要实现的功能代码
+    // 需要实现的功能代码
 })
 ```
 ```js
@@ -89,11 +89,11 @@ sequelize validator
 const Koa = require('koa')
 const parser = require('koa-bodyparser')
 /*
-  获取参数:
-  	1. /v1/:id/book 路径里面的参数 ctx.params
-  	2. /v1/book?id=5 后面的参数 ctx.request.query
-  	3. headers里面的参数 ctx.request.headers
-  	4. body里面的参数 借助koa-bodyparser中间件 ctx.request.body+
+    获取参数:
+    1. /v1/:id/book 路径里面的参数 ctx.params
+    2. /v1/book?id=5 后面的参数 ctx.request.query
+    3. headers里面的参数 ctx.request.headers
+    4. body里面的参数 借助koa-bodyparser中间件 ctx.request.body+
 */
 ... // 具体代码请看 app.js
 app.listen(3000)
