@@ -57,14 +57,13 @@ app.listen(3000)
 
 const middlewareName = require('./middlewares/xxx') // 引入中间件
 
-// 中间件1
-app.use(async (ctx, next) => {
+// app.use使用中间件
+app.use(async (ctx, next) => { // 中间件1
     // 需要实现的功能代码
     next()
 })
 
-// 中间件2
-app.use(middlewareName)
+app.use(middlewareName) // 中间件2
 ```
 
 ### 初始化项目
