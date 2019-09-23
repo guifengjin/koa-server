@@ -10,6 +10,24 @@ const app = new Koa()
 // 应用函数对象 中间件(函数)
 app.use(catchError) // 全局异常处理异常中间件
 app.use(parser())
+app.use(async (ctx, next) => {
+  // cxt 上下文 洋葱模型, next 下一个中间件
+  console.log('a-进')
+  await next()
+  console.log('a-出')
+})
+
+app.use(async (ctx, next) => {
+  console.log('b-进')
+  await next()
+  console.log('b-出')
+})
+
+app.use(async (ctx, next) => {
+  console.log('c-进')
+  await next()
+  console.log('c-出')
+})
 
 /*
   获取参数:
