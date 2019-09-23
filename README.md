@@ -84,6 +84,7 @@ require-directory
 sequelize validator
 ```
 3. 新建app.js
+
 [app.js](https://github.com/guifengjin/koa-server/blob/master/app.js)
 ```js
 const Koa = require('koa')
@@ -147,8 +148,8 @@ module.exports = catchError
 
 ### 查看具体效果
 
-1. git clone https://github.com/guifengjin/koa-server.git
-2. cd koa-server
-3. 安装依赖: yarn 或者 npm
-4. node app.js
+1. `git clone https://github.com/guifengjin/koa-server.git`
+2. `cd koa-server`
+3. 安装依赖: `yarn` 或者 `npm`
+4. `node app.js`
 5. GET http://localhost:3000/v1/book/list?id=8 ,注: id必须为正整数, 
