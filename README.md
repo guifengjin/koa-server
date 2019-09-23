@@ -92,7 +92,7 @@ const parser = require('koa-bodyparser')
     1. /v1/:id/book 路径里面的参数 ctx.params
     2. /v1/book?id=5 后面的参数 ctx.request.query
     3. headers里面的参数 ctx.request.headers
-    4. body里面的参数 借助koa-bodyparser中间件 ctx.request.body+
+    4. body里面的参数 借助koa-bodyparser中间件 ctx.request.body
 */
 ... // 具体代码请看 app.js
 app.listen(3000)
