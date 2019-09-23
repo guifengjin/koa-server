@@ -102,8 +102,11 @@ app.listen(3000)
 
 1. 捕捉错误 `try catch`
 2. 返回一段有意义的错误信息给客服端 `ctx.body`
+
 	status: http 状态码
+	
 	code: 自定义状态码
+	
 	message: 自定义状态码信息
 
 exception.js
