@@ -84,6 +84,7 @@ require-directory
 sequelize validator
 ```
 3. 新建app.js
+
 [app.js](https://github.com/guifengjin/koa-server/blob/master/app.js)
 ```js
 const Koa = require('koa')
