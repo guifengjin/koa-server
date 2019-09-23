@@ -119,8 +119,7 @@ const catchError = async (ctx, next) => {
 
 module.exports = catchError
 ```
-
-异常同意处理请看core目录下的`httpException.js`
+异常统一处理请看core目录下的`httpException.js`
 
 错误分类:
 
@@ -128,7 +127,6 @@ module.exports = catchError
 
 2. 未知错误(程序潜在错误), em: 数据库连接错误, 服务器代码错误  
  
-
 | status | code | message |  
 | --- | --- | --- |
 | 200 | 1000 | 请求成功 |
