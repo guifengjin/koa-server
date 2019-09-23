@@ -143,8 +143,8 @@ module.exports = catchError
 
 ### 查看具体效果
 
-1. `git clone https://github.com/guifengjin/koa-server.git`
-2. `cd koa-server`
-3. 安装依赖: `yarn` or `npm`
-4. `node app.js`
+1. git clone https://github.com/guifengjin/koa-server.git
+2. cd koa-server
+3. 安装依赖: yarn 或者 npm
+4. node app.js
 5. GET http://localhost:3000/v1/book/list?id=8 ,注: id必须为正整数, 
