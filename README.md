@@ -53,16 +53,18 @@ app.listen(3000)
 
 中间件可以理解为帮助我们实现某一项功能的函数
 ```js
-app.use((ctx, next) => {
+// app.js
+
+const middlewareName = require('./middlewares/xxx') // 引入中间件
+
+// 中间件1
+app.use(async (ctx, next) => {
     // 需要实现的功能代码
+    next()
 })
-```
-```js
-// 在app.js中引入中间件
-const middlewareName = require('./middlewares/xxx')
-...
+
+// 中间件2
 app.use(middlewareName)
-...
 ```
 
 ### 初始化项目
