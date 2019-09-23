@@ -143,3 +143,11 @@ module.exports = catchError
 | 500 | 1010 | 服务器错误 |
 | 503 | 1011 | 服务器暂时不可用 |
 
+
+### 查看具体效果
+
+1. `git clone https://github.com/guifengjin/koa-server.git`
+2. `cd koa-server`
+3. 安装依赖: `yarn` or `npm`
+4. `node app.js`
+5. GET http://localhost:3000/v1/book/list?id=8 ,注: id必须为正整数, 
