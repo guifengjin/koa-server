@@ -25,9 +25,10 @@ const catchError = async (ctx, next) => {
     }else { // 未知异常
       ctx.body = {
         msg: '未知错误',
-        code: 50000,
-        status: 500
+        code: 1010,
+        requestUrl: `${ctx.method} ${ctx.path}`
       }
+      ctx.status = 500
     }
   }
 }
