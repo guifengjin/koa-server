@@ -20,28 +20,22 @@ const Koa = require('koa')
 const app = new Koa()
 
 app.use(async (ctx, next) => {
-    // cxt 上下文 洋葱模型, next 下一个中间件
-    console.log('a-进')
-    await next()
-    // 模拟异步
-    setTimeout(() => {
-    	console.log('a-出')
-    }, 1000)
+  // cxt 上下文 洋葱模型, next 下一个中间件
+  console.log('a-进')
+  await next()
+  console.log('a-出')
 })
 
 app.use(async (ctx, next) => {
-    // 模拟异步
-    setTimeout(() => {
-    	console.log('b-进')
-    }, 1000)
-    await next()
-    console.log('b-出')
+  console.log('b-进')
+  await next()
+  console.log('b-出')
 })
 
 app.use(async (ctx, next) => {
-    console.log('c-进')
-    await next()
-    console.log('c-出')
+  console.log('c-进')
+  await next()
+  console.log('c-出')
 })
 
 app.listen(3000)
