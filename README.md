@@ -1,4 +1,4 @@
-### Koa
+### Koa2
 
 #### 洋葱模型
 
@@ -105,7 +105,7 @@ const catchError = async (ctx, next) => {
   try {
     await next()
   } catch (error) {
-	// 这里可以进行统一处理请求异常
+    // 这里可以进行统一处理请求异常
     ctx.body = "程序异常"
   }
 }
